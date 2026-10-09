@@ -72,6 +72,7 @@ Result is displayed and audio is generated
 
 - An internet connection is required, because translation and text-to-speech both use Google services.
 - Translation quality depends on Google Translate. The app does not include its own trained model.
+- The app uses the free Google Translate endpoint through deep-translator, which can rate-limit heavy use. If you see a “limiting requests” message, wait a few minutes and try again.
 
 ## Author
 
