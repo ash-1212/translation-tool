@@ -1,95 +1,84 @@
-# 🌐 AI Language Translation Tool
+# AI Language Translation Tool
 
-A professional AI-powered language translation web application built 
-with Python and Streamlit. Translates text between 100+ languages 
-instantly using Google Translate AI.
+Web app that translates text between 100+ languages and plays the result as audio. Built with Python and Streamlit, using Google Translate through the `deep-translator` library.
 
----
+![App screenshot](demo.png)
 
-## 🖼️ Features
+## Features
 
-- 🔁 Translate between 100+ languages instantly
-- 🔍 Auto-detect source language
-- 🔊 Text-to-speech audio playback
-- 📋 One-click copy translated text
-- 🎨 Beautiful dark-themed UI
-- ⚡ Fast and responsive interface
+- Translates text between the languages supported by Google Translate (100+)
+- Auto-detects the source language
+- Text-to-speech playback of the translation (gTTS)
+- Copy button for the translated text
+- Dark-themed Streamlit interface
 
----
+## Tech Stack
 
-## 🛠️ Tech Stack
+| Technology | Purpose |
+|---|---|
+| Python 3.x | Core language |
+| Streamlit | Web UI |
+| deep-translator | Wrapper for Google Translate |
+| gTTS | Google Text-to-Speech |
 
-| Technology     | Purpose                        |
-|----------------|-------------------------------|
-| Python 3.x     | Core programming language      |
-| Streamlit      | Web UI framework               |
-| deep-translator| Google Translate API wrapper   |
-| gTTS           | Google Text-to-Speech          |
-| Git & GitHub   | Version control & hosting      |
+## Project Structure
 
----
-
-## 📁 Project Structure
+```
 translation-tool/
-│
-├── app.py              # Streamlit UI — the face of the app
-├── translator.py       # Translation logic — the brain
-├── requirements.txt    # All required Python libraries
-├── README.md           # Project documentation
-└── .gitignore          # Files excluded from Git
+├── app.py            # Streamlit UI
+├── translator.py     # Translation logic
+├── requirements.txt  # Python dependencies
+├── demo.png          # App screenshot
+├── README.md
+└── .gitignore
+```
 
----
+## How to Run Locally
 
-## ⚙️ How to Run Locally
-
-### Step 1 — Clone the repository
+```bash
+# 1. Clone the repo
 git clone https://github.com/ash-1212/translation-tool.git
 cd translation-tool
 
-### Step 2 — Create virtual environment
+# 2. Create and activate a virtual environment
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate          # Windows
+source venv/bin/activate       # macOS / Linux
 
-### Step 3 — Install dependencies
+# 3. Install dependencies
 pip install -r requirements.txt
 
-### Step 4 — Run the app
-streamlit run app.py
+# 4. Start the app
+python -m streamlit run app.py
+```
 
-### Step 5 — Open in browser
-http://localhost:8501
+Then open http://localhost:8501 in your browser.
 
----
+## How It Works
 
-## 🔄 How It Works
-User types text + selects languages
-↓
-Streamlit UI captures input
-↓
-translator.py sends to Google Translate
-↓
-Translated text returned
-↓
-Result displayed + audio generated
+```
+User enters text and selects languages
+        ↓
+Streamlit UI captures the input
+        ↓
+translator.py sends the text to Google Translate
+        ↓
+Translated text is returned
+        ↓
+Result is displayed and audio is generated
+```
 
----
+## Notes
 
-## 📸 App Preview
+- An internet connection is required, because translation and text-to-speech both use Google services.
+- Translation quality depends on Google Translate. The app does not include its own trained model.
 
-> Dark themed professional UI with language selector,
-> text input, instant translation, and audio playback.
+## Author
 
----
+**Ayesha Nazish**
+Built during the CodeAlpha AI Internship.
+[GitHub](https://github.com/ash-1212) · [LinkedIn](https://www.linkedin.com/in/ayeshanazish-452048274)
 
-## 👨‍💻 Author
+## License
 
-- **Name:** Ayesha Nazish
-- **Internship:** CodeAlpha AI Internship
-
-
----
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
+MIT License. See the [LICENSE](LICENSE) file.
