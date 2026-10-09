@@ -24,7 +24,7 @@ Web app that translates text between 100+ languages and plays the result as audi
 ## Project Structure
 
 ```
-translation-tool/
+language-translation-tool/
 ├── app.py            # Streamlit UI
 ├── translator.py     # Translation logic
 ├── requirements.txt  # Python dependencies
@@ -38,7 +38,7 @@ translation-tool/
 ```bash
 # 1. Clone the repo
 git clone https://github.com/ash-1212/translation-tool.git
-cd translation-tool
+cd language-translation-tool
 
 # 2. Create and activate a virtual environment
 python -m venv venv
